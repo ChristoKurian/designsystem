@@ -37,7 +37,8 @@ header p {
   box-shadow: 0 6px 18px rgba(30, 47, 70, 0.06);
 }
 
-.controls {
+.controls,
+.add-system {
   margin: 1rem 0;
 }
 
@@ -47,13 +48,41 @@ label {
   margin-bottom: 0.5rem;
 }
 
+input,
+textarea,
 select {
   width: 100%;
-  max-width: 420px;
   padding: 0.65rem;
   border-radius: 10px;
   border: 1px solid #c3d2e2;
   font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
+select {
+  max-width: 420px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.6rem;
+}
+
+button {
+  margin-top: 0.8rem;
+  background: #0f62fe;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 0.95rem;
+  cursor: pointer;
+}
+
+.form-message {
+  min-height: 1.2em;
+  margin: 0.5rem 0 0;
+  color: #1d4ed8;
 }
 
 .meta-grid {

@@ -21,6 +21,48 @@
         <select id="systemSelect"></select>
       </section>
 
+      <section class="panel add-system">
+        <h2>Add your own design system</h2>
+        <form id="addSystemForm">
+          <div class="form-grid">
+            <label>
+              Name
+              <input id="inputName" required placeholder="Acme UI" />
+            </label>
+            <label>
+              Organization
+              <input id="inputOrg" required placeholder="Acme" />
+            </label>
+            <label>
+              Tech
+              <input id="inputTech" placeholder="React / Vue / Web" />
+            </label>
+            <label>
+              Link
+              <input id="inputUrl" type="url" required placeholder="https://example.com" />
+            </label>
+          </div>
+
+          <label>
+            Description
+            <textarea id="inputDescription" rows="2" placeholder="Short summary"></textarea>
+          </label>
+
+          <label>
+            Components (comma-separated)
+            <input id="inputComponents" placeholder="Button, Card, Modal" />
+          </label>
+
+          <label>
+            Token colors (comma-separated hex)
+            <input id="inputTokens" placeholder="#1D4ED8, #0EA5E9, #F8FAFC" />
+          </label>
+
+          <button type="submit">Add to dropdown</button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+
       <section id="dashboard" class="panel dashboard" aria-live="polite">
         <h2 id="systemName"></h2>
         <p id="systemDescription"></p>
