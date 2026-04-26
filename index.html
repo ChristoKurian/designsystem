@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Systems Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Awesome Design Systems — Dummy Dashboard</h1>
+        <p>
+          Select a design system from the dropdown to quickly visualize core
+          details.
+        </p>
+      </header>
+
+      <section class="panel controls">
+        <label for="systemSelect">Design system</label>
+        <select id="systemSelect"></select>
+      </section>
+
+      <section class="panel add-system">
+        <h2>Add your own design system</h2>
+        <form id="addSystemForm">
+          <div class="form-grid">
+            <label>
+              Name
+              <input id="inputName" required placeholder="Acme UI" />
+            </label>
+            <label>
+              Organization
+              <input id="inputOrg" required placeholder="Acme" />
+            </label>
+            <label>
+              Tech
+              <input id="inputTech" placeholder="React / Vue / Web" />
+            </label>
+            <label>
+              Link
+              <input id="inputUrl" type="url" required placeholder="https://example.com" />
+            </label>
+          </div>
+
+          <label>
+            Description
+            <textarea id="inputDescription" rows="2" placeholder="Short summary"></textarea>
+          </label>
+
+          <label>
+            Components (comma-separated)
+            <input id="inputComponents" placeholder="Button, Card, Modal" />
+          </label>
+
+          <label>
+            Token colors (comma-separated hex)
+            <input id="inputTokens" placeholder="#1D4ED8, #0EA5E9, #F8FAFC" />
+          </label>
+
+          <button type="submit">Add to dropdown</button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="dashboard" class="panel dashboard" aria-live="polite">
+        <h2 id="systemName"></h2>
+        <p id="systemDescription"></p>
+
+        <div class="meta-grid">
+          <div>
+            <h3>Organization</h3>
+            <p id="systemOrg"></p>
+          </div>
+          <div>
+            <h3>Tech</h3>
+            <p id="systemTech"></p>
+          </div>
+          <div>
+            <h3>Primary link</h3>
+            <a id="systemLink" href="#" target="_blank" rel="noreferrer noopener">Visit</a>
+          </div>
+        </div>
+
+        <h3>Core Components</h3>
+        <ul id="componentsList" class="chip-list"></ul>
+
+        <h3>Token Palette</h3>
+        <div id="tokenSwatches" class="swatch-row"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
